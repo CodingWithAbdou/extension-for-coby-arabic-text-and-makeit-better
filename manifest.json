@@ -1,0 +1,18 @@
+{
+  "name": "إجعل النص أفضل",
+  "description": "تعمل على إزالة الرموز والتشكيل من النصوص العربية بالاضافة تقوم بنزع الايموجي",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["contextMenus","clipboardRead" ,  "clipboardWrite" ,  "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  }
+
+} 
